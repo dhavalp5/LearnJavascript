@@ -51,10 +51,18 @@ const newObj = {
     [firstSymbol] : "MyKey1" //to define symbol always add []
 }
 
-console.log(newObj.name); //old method
-console.log(newObj["name"]) // new method
-console.log(typeof newObj[firstSymbol]); //to access symbol always add []
-console.log(newObj);
+// console.log(newObj.name); //old method
+// console.log(newObj["name"]) // new method
+// console.log(typeof newObj[firstSymbol]); //to access symbol always add []
+// console.log(newObj);
 
 const userObj = new Object();   // known as singleton object
 const userObj1 = {};            // Also, an object but a non singleton object
+
+// console.log(newObj.hasOwnProperty('isLogged')); // Accessing property and method
+
+
+//object destructuring
+const {email : mail} = newObj;
+//console.log(mail);
+
