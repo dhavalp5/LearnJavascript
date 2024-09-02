@@ -66,3 +66,64 @@ const userObj1 = {};            // Also, an object but a non singleton object
 const {email : mail} = newObj;
 //console.log(mail);
 
+
+//++++++++++++++++Functions++++++++++++++++
+
+function calculate(number1, number2){ //here number1 and number2 is known as parameters
+    // we can call this function before line number 72
+    return number1 + number2
+}
+
+// console.log(calculate(10,12)); // here 10 and 12 is known as Arguments
+
+//Function declaration
+//calculate functions one above and one below are same
+const calculate1 = function(number1, number2){ // we can not call this function before line number 81 
+    return number1 + number2
+}
+
+
+// passing array in function
+function printSecondNumber(getArray){
+    console.log(getArray[1])
+}
+
+// printSecondNumber(myArr);        //pass array by variable
+// printSecondNumber([10,20,23]);   // directly pass array
+
+
+
+//Passing Object
+function printUserDetails(getObject){
+    // console.log(` name: ${getObject.name}, email: ${getObject.email}`)
+}
+
+//printUserDetails(newObj)  //pass object by variable
+printUserDetails({
+    name : "Dc",
+    email: "dc@google.com"
+})  //pass object directly
+
+
+//Arrow Function
+const calculate2 = (number1, number2) => {
+    return number1 + number2
+}
+
+const calculate3 = (number1, number2) => (number1 + number2) // Implicit Return
+
+const calculate4 = (number1, number2) => ({username: "Dc"}); // Implicit Return of an object
+
+
+//Example of IIFE (Immidiately Invoked function Expression)
+// (function chai(){
+//     console.log(`hello World`);
+// })();
+
+// ( ()  => {
+//     console.log(`hello World`);
+// })();
+
+( (name)  => {
+    console.log(`${name}`);
+})("Dc");
